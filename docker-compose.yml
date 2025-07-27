@@ -1,0 +1,36 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+  webserver:
+    image: apache/airflow
+    entrypoint: ./scripts/entrypoint.sh
+    restart: on-failure
+    depends_on:
+      - postgres
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./scripts:/opt/airflow/scripts
+    ports:
+      - "8080:8080"
+  scheduler:
+    image: apache/airflow
+    # command: scheduler
+    command: bash -c "pip install -r requirements.txt && airflow scheduler"
+    restart: on-failure
+    depends_on:
+      - postgres
+      - webserver
+    env_file:
+      - .env
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./requirements.txt:/opt/airflow/requirements.txt
