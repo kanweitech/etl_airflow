@@ -27,6 +27,6 @@ If **Docker** and **Docker Compose** are installed follow the steps below:
   5. User: `admin` and Password: `admin1234`
   6. To run it once, trigger the `pgcb_etl` by clicking the play button under the Actions column
   7. To run it continuously, Unpause the workflow left of **pgcb_etl**
-You can watch the log files
+  8. You can watch the log files
 `git status`
 
