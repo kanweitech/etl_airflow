@@ -1,0 +1,13 @@
+﻿apache-airflow
+beautifulsoup4
+Flask
+gunicorn
+numpy
+openpyxl
+pandas
+pathlib
+psycopg2-binary
+requests
+SQLAlchemy
+wget
+# xlrd
