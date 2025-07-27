@@ -11,3 +11,21 @@ Extract data from [Power Grid Company of Bangladesh](https://pgcb.gov.bd/site/pa
 In first run, read only the first page
 Extract and read reports, transform the data and load it into a database
 In subsequent run, perform ETL only for the newly added reports from the first page.
+
+# How to Run the Project
+The project will run in Docker container. Therefore, Docker and Docker Compose must be installed on your workstation.
+
+    - 1. Install Docker on your workstation.
+    - 2. Install Docker Compose on your workstation.
+If Docker and Docker Compose are installed follow the steps below:
+
+Download the project from GitHub: git clone https://github.com/rezaabdullah/etl_airflow.git
+Once downloaded, go to the project directory
+Open terminal or command prompt and enter docker-compose up or docker-compose up -d
+It may take few minutes for the containers to download and install the required dependencies. Once the container is up, open browser and go to localhost:8080
+User: admin and Password: admin1234
+To run it once, trigger the pgcb_etl by clicking the play button under the Actions column
+To run it continuously, Unpause the workflow left of pgcb_etl
+You can watch the log files
+`git status`
+
