@@ -15,11 +15,11 @@ In subsequent run, perform ETL only for the newly added reports from the first p
 # How to Run the Project
 The project will run in Docker container. Therefore, Docker and Docker Compose must be installed on your workstation.
 
-  1. Install [Docker]() on your workstation.
-  2. Install [Docker Compose]() on your workstation.
+  1. Install [Docker](https://docs.docker.com/engine/install/) on your workstation.
+  2. Install [Docker Compose](https://docs.docker.com/compose/install/) on your workstation.
 If Docker and Docker Compose are installed follow the steps below:
 
-Download the project from GitHub: git clone https://github.com/rezaabdullah/etl_airflow.git
+Download the project from [GitHub](): `git clone https://github.com/kanweitech/etl_airflow.git`
 Once downloaded, go to the project directory
 Open terminal or command prompt and enter docker-compose up or docker-compose up -d
 It may take few minutes for the containers to download and install the required dependencies. Once the container is up, open browser and go to localhost:8080
