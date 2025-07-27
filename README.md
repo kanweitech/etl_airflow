@@ -29,5 +29,7 @@ If **Docker** and **Docker Compose** are installed follow the steps below:
   7. To run it continuously, Unpause the workflow left of **pgcb_etl**
   8. You can watch the log files
 ![image](https://github.com/kanweitech/etl_airflow/blob/main/static/Image.png)
+
+
 `git status`
 
