@@ -1,4 +1,5 @@
 # Airflow Tutorial
+![image](https://github.com/kanweitech/etl_airflow/blob/main/static/Screenshot_20250728-124711.jpg)
 This tutorial demonstrates how to use Apache Airflow for workflow orchestration.
 
 # Objective
