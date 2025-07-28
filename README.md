@@ -31,6 +31,20 @@ If **Docker** and **Docker Compose** are installed follow the steps below:
   8. You can watch the log files
 ![image](https://github.com/kanweitech/etl_airflow/blob/main/static/airflow_homepage.jpg)
 
+# How to Run Workflows in Airflow
+## DAG
+A DAGfile is nothing but a python script. In general, we specify DAGs in a single `.py` file which is stored in `dags` directory. However, for advance and complex workflows, [Packaged DAGs]() can be used. For example, in our current project we have two DAGs: `dummy_dag.py` and `etl_dag.py`. Referring to `etl_dag.py`, the steps for define and declaring a DAG is written below:
 
-`git status`
+  1. First, we import python packages such as `datetime`, `airflow` etc.
+
+```import datetime as dt
+
+# The DAG object; we'll need this to instantiate a DAG
+from airflow import DAG
+
+# Operators; we need this to operate!
+from airflow.operators.python import PythonOperator
+from airflow.operators.bash import BashOperator
+from airflow.utils.dates import days_ago
+```
 
